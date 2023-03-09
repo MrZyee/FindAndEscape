@@ -15,16 +15,16 @@ namespace FindAndEscape
             int cursorX = 0;
             int cursorY = 0;
 
-            // Rysowanie planszy
+            // Drawing board
             DrawBoard(boardSize, cursorX, cursorY);
 
-            // Pętla główna programu
+            // Main loop program
             while (true)
             {
-                // Odczytywanie klawisza wciśniętego przez użytkownika
+                // Reading the key pressed by the user
                 ConsoleKeyInfo key = Console.ReadKey(true);
 
-                // Poruszanie się kursora
+                // Moving the cursor
                 switch (key.Key)
                 {
                     case ConsoleKey.LeftArrow:
@@ -45,7 +45,7 @@ namespace FindAndEscape
                         break;
                 }
 
-                // Ponowne rysowanie planszy
+                // Redrawing the board
                 Console.Clear();
                 DrawBoard(boardSize, cursorX, cursorY);
             }
