@@ -6,7 +6,8 @@ namespace FindAndEscape
     {
         static void Main(string[] args)
         {
-            GameMechanics.Mechanics();
+            GameMechanics MyGame = new GameMechanics();
+            MyGame.Mechanics();
         }
 
     }

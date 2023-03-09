@@ -9,7 +9,7 @@ namespace FindAndEscape
 {
     internal class GameMechanics
     {
-        public static void Mechanics()
+        public void Mechanics()
         {
             int boardSize = 10;
             int cursorX = 0;
@@ -51,7 +51,7 @@ namespace FindAndEscape
             }
         }
 
-        static void DrawBoard(int size, int cursorX, int cursorY)
+        void DrawBoard(int size, int cursorX, int cursorY)
         {
             for (int i = 0; i < size; i++)
             {
