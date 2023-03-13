@@ -89,7 +89,7 @@ namespace FindAndEscape
             Room room2 = new Room("Jesteś w drugim pokoju. Widzisz kanapę, fotel i okno.", null);
 
             Item item1 = new Item("Klucz", "Złoty klucz.");
-            Item item3 = new Item("Stół. ", "Drewniany stoł");
+            Item item3 = new Item("Stół", "Drewniany stoł");
             Item item2 = new Item("Miecz", "Ostry miecz.");
 
             room1.Items.Add(item1);
