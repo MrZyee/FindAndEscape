@@ -89,9 +89,11 @@ namespace FindAndEscape
             Room room2 = new Room("Jesteś w drugim pokoju. Widzisz kanapę, fotel i okno.", null);
 
             Item item1 = new Item("Klucz", "Złoty klucz.");
+            Item item3 = new Item("Stół. ", "Drewniany stoł");
             Item item2 = new Item("Miecz", "Ostry miecz.");
 
             room1.Items.Add(item1);
+            room1.Items.Add(item3);
             room2.Items.Add(item2);
 
             room1.ConnectedRooms.Add("wschód", room2);
@@ -148,7 +150,7 @@ namespace FindAndEscape
     //W powyższej grze gracz znajduje się w początkowym pokoju, który opisany jest jako "Jesteś w pokoju. Widzisz stół, krzesło i drzwi.".
     //Gracz może poruszać się między pokojami, używać przedmiotów i zabierać przedmioty z pokoju.
     //W grze znajdują się dwa pokoje połączone ze sobą drzwiami. W pokoju 1 znajduje się złoty klucz, który może być użyty do otwarcia drzwi prowadzących do
-    //rugiego pokoju. W drugim pokoju znajduje się ostry miecz, który jednak nie może być użyty w żaden sposób.
+    //drugiego pokoju. W drugim pokoju znajduje się ostry miecz, który jednak nie może być użyty w żaden sposób.
 
     //Gracz może użyć komendy "opisz" aby otrzymać opis aktualnego pokoju, "przedmioty" aby wyświetlić listę przedmiotów w jego posiadaniu, "zabierz [nazwa przedmiotu]" aby zdobyć przedmiot znajdujący się w aktualnym pokoju i "użyj [nazwa przedmiotu]" aby użyć przedmiotu.
 
