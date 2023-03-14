@@ -89,12 +89,22 @@ namespace FindAndEscape
             Room room2 = new Room("Jesteś w drugim pokoju. Widzisz kanapę, fotel i okno.", null);
 
             Item item1 = new Item("Klucz", "Złoty klucz.");
-            Item item3 = new Item("Stół", "Drewniany stoł");
-            Item item2 = new Item("Miecz", "Ostry miecz.");
+            Item item2 = new Item("Stół", "Drewniany stoł");
+            Item item3 = new Item("Krzesło", "Skórzane krzesło");
+            Item item4 = new Item("Drzwi", "Drzwi ze sklejki");
+            Item item5 = new Item("Kanapa", "Pikowana kana[a");
+            Item item6 = new Item("Fotel", "Wielki fotel");
+            Item item7 = new Item("Okno", "Drewniane okno");
+            Item item8 = new Item("Miecz", "Ostry miecz.");
 
             room1.Items.Add(item1);
+            room1.Items.Add(item2);
             room1.Items.Add(item3);
-            room2.Items.Add(item2);
+            room1.Items.Add(item4);
+            room2.Items.Add(item5);
+            room2.Items.Add(item6);
+            room2.Items.Add(item7);
+            room2.Items.Add(item8);
 
             room1.ConnectedRooms.Add("wschód", room2);
             room2.ConnectedRooms.Add("zachód", room1);
