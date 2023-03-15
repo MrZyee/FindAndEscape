@@ -11,6 +11,7 @@ namespace FindAndEscape
             Room currentRoom = InitializeRooms(); // Utworzenie początkowego pokoju
             List<Item> inventory = new List<Item>(); // Utworzenie pustej listy przedmiotów w ekwipunku
             Console.WriteLine("Witaj w grze tekstowej!");
+            Console.WriteLine("Jesteś w pierwszym pokoju!");
             Console.WriteLine("Wpisz 'pomoc' aby zobaczyć dostępne komendy.");
             Console.WriteLine(currentRoom.Description); // Opis początkowego pokoju
             while (true) // Główna pętla gry
@@ -72,11 +73,19 @@ namespace FindAndEscape
                     Console.WriteLine("- przedmioty");
                     Console.WriteLine("- pomoc");
                     Console.WriteLine("- opisz");
+                    Console.WriteLine("- zobacz");
+                    Console.WriteLine("- otwórz PRZEDMIOT");
                 }
                 else if (input == "opisz") // Opisanie aktualnego pokoju
                 {
                     Console.WriteLine(currentRoom.Description);
-                 }
+                }
+                else if(input == "zobacz")
+                {
+                    string itemName = input.Substring(4);
+                    OpenItem openItem = new OpenItem();
+                    openItem.openItem();
+                }
                 else // Komenda nieznana
                 {
                     Console.WriteLine("Nieznana komenda. Wpisz 'pomoc' aby zobaczyć dostępne komendy.");
@@ -85,14 +94,14 @@ namespace FindAndEscape
         }
         static Room InitializeRooms() // Inicjalizacja początkowego pokoju i przedmiotów
         {
-            Room room1 = new Room("Jesteś w pokoju. Widzisz stół, krzesło i drzwi.", null);
+            Room room1 = new Room("Jesteś w pokoju. Widzisz stół, krzesło i komoda.", null);
             Room room2 = new Room("Jesteś w drugim pokoju. Widzisz kanapę, fotel i okno.", null);
 
             Item item1 = new Item("Klucz", "Złoty klucz.");
             Item item2 = new Item("Stół", "Drewniany stoł");
             Item item3 = new Item("Krzesło", "Skórzane krzesło");
-            Item item4 = new Item("Drzwi", "Drzwi ze sklejki");
-            Item item5 = new Item("Kanapa", "Pikowana kana[a");
+            Item item4 = new Item("komoda", "Duża komoda");
+            Item item5 = new Item("Kanapa", "Pikowana kanapa");
             Item item6 = new Item("Fotel", "Wielki fotel");
             Item item7 = new Item("Okno", "Drewniane okno");
             Item item8 = new Item("Miecz", "Ostry miecz.");
