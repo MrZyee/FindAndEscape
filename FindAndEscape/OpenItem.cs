@@ -21,6 +21,7 @@ namespace FindAndEscape
             else if (name == "otwórz okno")
             {
                 Console.WriteLine("UCIEKASZ!!!");
+                Environment.Exit(1);
             }
             else
             {
